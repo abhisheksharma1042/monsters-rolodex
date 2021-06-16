@@ -2,8 +2,8 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import { CardList } from './components/cardlist/card-list.component.jsx';
-import { SearchBox } from './components/searchbox/search-box.component';
+import { CardList } from './components/card-list/card-list.component.jsx';
+import { SearchBox } from './components/search-box/search-box.component';
 import axios from 'axios';
 
 //Class Componentyar

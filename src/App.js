@@ -4,7 +4,9 @@ import React, { Component } from 'react';
 import './App.css';
 import { CardList } from './components/cardlist/card-list.component.jsx';
 import { SearchBox } from './components/searchbox/search-box.component';
+import axios from 'axios';
 
+//Class Componentyar
 class App extends Component {
   constructor() {
     super();
@@ -19,8 +21,9 @@ class App extends Component {
 
   componentDidMount() {
     //Make call to API for getting a list of monsters in JSON  format
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then((response) => response.json())
+    axios
+      .get('https://jsonplaceholder.typicode.com/users')
+      .then((response) => response.data)
       .then((users) => this.setState({ monsters: users }));
   }
 
